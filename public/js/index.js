@@ -8,6 +8,7 @@
     }
   };
 
+  // 点击跳转到对应的详情页
   function goToDetail() {
     window.location = '/detail?id=' + this.id;
   }

@@ -19,7 +19,7 @@ function get(pathname, res) {
         res.end();
       } else {
         if (isImage(extname)) {
-          res.end(data, "binary");
+          res.end(data, "binary");// 二进制文件需要加上binary
         } else {
           res.end(data.toString());
         }
@@ -28,6 +28,7 @@ function get(pathname, res) {
   }
 }
 
+// 根据拓展名判断是否为图片
 function isImage(extname) {
   if (extname === '.jpg' || extname === '.jpeg' ||
     extname === '.png' || extname === '.gif') {
@@ -36,6 +37,7 @@ function isImage(extname) {
   return false;
 }
 
+// 提供给其他模块使用的接口
 module.exports = {
   get: get
 };
