@@ -1,0 +1,23 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "a simple example of building a server by NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hongchh/node-example.git"
+  },
+  "keywords": [
+    "node",
+    "example"
+  ],
+  "author": "hongchh_sysu@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hongchh/node-example/issues"
+  },
+  "homepage": "https://github.com/hongchh/node-example#readme"
+}
