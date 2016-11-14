@@ -1,0 +1,45 @@
+{
+  "foods": [{
+    "id": "0",
+    "image": "public/img/fish.jpg",
+    "name": "咸鱼自助餐",
+    "price": "￥ 87",
+    "description": "咸鱼，咸鱼，我是咸鱼，一条大咸鱼，一条老咸鱼，一条大佬咸鱼。"
+  }, {
+    "id": "1",
+    "image": "public/img/fish.jpg",
+    "name": "咸鱼自助餐",
+    "price": "￥ 87",
+    "description": "咸鱼，咸鱼，我是咸鱼，一条大咸鱼，一条老咸鱼，一条大佬咸鱼。"
+  }, {
+    "id": "2",
+    "image": "public/img/fish.jpg",
+    "name": "咸鱼自助餐",
+    "price": "￥ 87",
+    "description": "咸鱼，咸鱼，我是咸鱼，一条大咸鱼，一条老咸鱼，一条大佬咸鱼。"
+  }, {
+    "id": "3",
+    "image": "public/img/fish.jpg",
+    "name": "咸鱼自助餐",
+    "price": "￥ 87",
+    "description": "咸鱼，咸鱼，我是咸鱼，一条大咸鱼，一条老咸鱼，一条大佬咸鱼。"
+  }, {
+    "id": "4",
+    "image": "public/img/fish.jpg",
+    "name": "咸鱼自助餐",
+    "price": "￥ 87",
+    "description": "咸鱼，咸鱼，我是咸鱼，一条大咸鱼，一条老咸鱼，一条大佬咸鱼。"
+  }, {
+    "id": "5",
+    "image": "public/img/fish.jpg",
+    "name": "咸鱼自助餐",
+    "price": "￥ 87",
+    "description": "咸鱼，咸鱼，我是咸鱼，一条大咸鱼，一条老咸鱼，一条大佬咸鱼。"
+  }, {
+    "id": "6",
+    "image": "public/img/fish.jpg",
+    "name": "咸鱼自助餐",
+    "price": "￥ 87",
+    "description": "咸鱼，咸鱼，我是咸鱼，一条大咸鱼，一条老咸鱼，一条大佬咸鱼。"
+  }]
+}

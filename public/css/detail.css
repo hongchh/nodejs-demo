@@ -1,0 +1,31 @@
+html, body {
+  background-color: #eee;
+}
+
+.container {
+  position: absolute;
+  width: 940px;
+  height: auto;
+  top: 30px;
+  left: 50%;
+  margin-left: -470px;
+  background-color: white;
+}
+
+.info {
+  width: 900px;
+  height: 300px;
+  margin: 10px auto;
+}
+
+.info img, .info .detail {
+  width: 400px;
+  height: 300px;
+  margin: 0;
+  display: inline-block;
+}
+
+.detail {
+  float: right;
+  padding: 30px;
+}

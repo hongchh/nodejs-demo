@@ -12,8 +12,9 @@ module.exports = function() {
   }
 
   function getFood(id) {
-    for (food in data.foods) {
-      if (food.id == id) return food;
+    for (var i = 0; i < data.foods.length; ++i) {
+      if (data.foods[i].id == id)
+        return data.foods[i];
     }
   }
 
