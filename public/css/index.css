@@ -1,0 +1,42 @@
+html, body {
+  background-color: #eee;
+}
+
+.container {
+  position: absolute;
+  width: 940px;
+  height: auto;
+  top: 30px;
+  left: 50%;
+  margin-left: -470px;
+  background-color: white;
+}
+
+.food-card {
+  width: 200px;
+  height: 300px;
+  margin: 15px;
+  padding: 0;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.food-card:hover {
+  border: 1px solid red;
+}
+
+.food-card img {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.food-card h1, .food-card h2 {
+  padding: 10px;
+  margin: 0;
+}
+
+.food-card h2 {
+  text-align: right;
+  color: #ff4883;
+}
