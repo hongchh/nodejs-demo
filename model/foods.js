@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 module.exports = function() {
-  var data = JSON.parse(fs.readFileSync('../data/foods.json'));
+  var data = JSON.parse(fs.readFileSync(__dirname + '/../data/foods.json'));
   var foods = {
     getAllFoods: getAllFoods,
     getFood: getFood
