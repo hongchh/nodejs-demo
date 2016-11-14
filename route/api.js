@@ -48,22 +48,24 @@ postHandler['/'] = function(res, data) {
 };
 
 function get(req, res) {
-  if (typeof getHandler[req.url] === "function") {
-    getHandler[req.url](req, res);
+  var reqUrl = url.parse(req.url);
+  if (typeof getHandler[reqUrl.pathname] === "function") {
+    getHandler[reqUrl.pathname](req, res);
   } else {
     getHandler["/404"](req, res);
   }
 }
 
 function post(req, res) {
-  if (typeof postHandler[req.url] === "function") {
+  var reqUrl = url.parse(req.url);
+  if (typeof postHandler[reqUrl.pathname] === "function") {
     var postData = "";
     req.on('data', (data) => {
       postData += data;
     });
     req.on('end', () => {
       postData = querystring.parse(postData);
-      postHandler[req.url](res, postData);
+      postHandler[reqUrl.pathname](res, postData);
     });
   } else {
     getHandler["/404"](req, res);

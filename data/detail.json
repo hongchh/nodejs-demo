@@ -1,5 +1,5 @@
 {
-  "foods": [{
+  "detail": [{
     "id": "0",
     "image": "public/img/fish.jpg",
     "name": "咸鱼自助餐",
