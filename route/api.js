@@ -2,9 +2,10 @@ var fs = require('fs');
 var querystring = require('querystring');
 var foods = require('../model/foods')();
 
-var handler = {};
+var getHandler = {};
+var postHandler = {};
 
-handler['/'] = function(req, res) {
+getHandler['/'] = function(req, res) {
   var foodMenu = "";
   var food = foods.getAllFoods();
   for (var i = 0; i < food.length; ++i) {
@@ -23,31 +24,35 @@ handler['/'] = function(req, res) {
   });
 };
 
-handler['/404'] = function(req, res) {
+getHandler['/404'] = function(req, res) {
   res.writeHead(404, {"Content-Type": "text/plain"});
   res.end("404 Not Found");
 };
 
+postHandler['/'] = function(res, data) {
+  // do something
+}
+
 function get(req, res) {
-  if (typeof handler[req.url] === "function") {
-    handler[req.url](req, res);
+  if (typeof getHandler[req.url] === "function") {
+    getHandler[req.url](req, res);
   } else {
-    handler["/404"](req, res);
+    getHandler["/404"](req, res);
   }
 }
 
 function post(req, res) {
-  if (typeof handler[req.url] === "function") {
+  if (typeof postHandler[req.url] === "function") {
     var postData = "";
     req.on('data', (data) => {
       postData += data;
     });
     req.on('end', () => {
       postData = querystring.parse(postData);
-      handler[req.url](req, res);
+      postHandler[req.url](res, postData);
     });
   } else {
-    handler["/404"](req, res);
+    getHandler["/404"](req, res);
   }
 }
 
