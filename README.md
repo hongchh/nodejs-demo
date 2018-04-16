@@ -1,7 +1,2 @@
-# Node Example
-本项目为一个简单的使用NodeJS搭建服务器的示例。
-
-项目启动方法：
-```txt
-node server.js
-```
+# NodeJS Demo
+本仓库用于记录个人学习NodeJS过程中，对部分模块的用法的探究过程。保存个人在练习使用部分NodeJS模块功能时候所写的Demo，以便回顾和复习。
