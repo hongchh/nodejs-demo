@@ -1,4 +1,4 @@
-# Node Example
+# Simple HTTP Server
 本项目为一个简单的使用NodeJS搭建服务器的示例。
 
 项目启动方法：
