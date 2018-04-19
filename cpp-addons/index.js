@@ -38,9 +38,23 @@ console.log('[ReturnObjectDemo] ' + someone.firstname + someone.lastname)
 let sayHiTo = Person.getFunction()
 console.log('[ReturnFunctionDemo] ' + sayHiTo(someone))
 
-// object-wrap demo
-// const ObjectWrap = require('./build/Release/object_wrap')
-// let counter = new ObjectWrap.Counter(5)
-// console.log('[ObjectWrapDemo] ' + counter.plusOne())
-// console.log('[ObjectWrapDemo] ' + counter.plusOne())
-// console.log('[ObjectWrapDemo] ' + counter.plusOne())
+// cpp-object-wrap demo
+const AccumulatorModule = require('./build/Release/Accumulator')
+let acc = new AccumulatorModule.Accumulator(2)
+console.log('[ObjectWrapDemo] 2 + 12 = ' + acc.add(12))
+console.log('[ObjectWrapDemo] 2 + 12 + 5 = ' + acc.add(5))
+console.log('[ObjectWrapDemo] add times: ' + acc.getAddTimes())
+
+// cpp-object-wrap-factory demo
+let acc2 = AccumulatorModule.getAccumulatorInstance(3)
+console.log('[ObjectWrapFactoryDemo] 3 + 16 = ' + acc2.add(16))
+console.log('[ObjectWrapFactoryDemo] 3 + 16 + 7 = ' + acc2.add(7))
+console.log('[ObjectWrapFactoryDemo] 3 + 16 + 7 + 4 = ' + acc2.add(4))
+console.log('[ObjectWrapFactoryDemo] add times: ' + acc2.getAddTimes())
+
+// async-demo
+const AccumulateAsync = require('./build/Release/accumulate_async')
+AccumulateAsync.accumulateAsync(1, 3, 4, 7, (sum) => {
+  console.log('[AsyncDemo] 1 + 3 + 4 + 7 = ' + sum)
+})
+console.log('[AsyncDemo] Hi~')
